@@ -32,6 +32,11 @@ export const appSidebarData = {
       title: "About",
       url: "/my-app/about",
       icon: Send
+    },
+    {
+      title: "About",
+      url: "/about",
+      icon: Send
     }
   ]
 };

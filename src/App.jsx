@@ -10,6 +10,8 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "./components/app-sidebar";
 import Navbar from "./components/navbar";
 import { Separator } from "@/components/ui/separator";
+import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   //  const defaultOpen = cookieStore.get('sidebar:state')?.value === 'true'
@@ -18,20 +20,24 @@ function App() {
       <SidebarProvider defaultOpen={true}>
         <AppSidebar />
       </SidebarProvider>
-
+        
       {/* Main Content Area */}
-      <div className='flex h-screen w-full flex-col'>
-        <Navbar />
-        <Separator className='my-0' />
+      <BrowserRouter>
         <div className='w-full'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/playground' element={<Playground />} />
-            <Route path='/settings' element={<Settings />} />
-            <Route path='/about' element={<About />} />
-          </Routes>
+          <Navbar />
+          <Separator className='my-0' />
+          <div>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/playground' element={<Playground />} />
+              <Route path='/settings' element={<Settings />} />
+              <Route path='/about' element={<About />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
+
+      <Toaster />
     </div>
   );
 }

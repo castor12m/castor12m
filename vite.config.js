@@ -9,8 +9,8 @@ import { fileURLToPath } from 'url';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  //base: '/my-app/',
-   base: '/',
+  base: '/my-app/',
+  //base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

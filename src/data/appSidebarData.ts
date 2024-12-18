@@ -9,14 +9,14 @@ export const appSidebarData = {
   basic: [
     {
       title: "Home",
-      url: "/",
+      url: "/my-app/",
       icon: Home
     }
   ],
   navMain: [
     {
       title: "Playground",
-      url: "/playground",
+      url: "/my-app/playground",
       icon: SquareTerminal,
       isActive: true,
       items: []
@@ -25,12 +25,12 @@ export const appSidebarData = {
   navSecondary: [
     {
       title: "Settings",
-      url: "/settings",
+      url: "/my-app/settings",
       icon: Settings2
     },
     {
       title: "About",
-      url: "/about",
+      url: "/my-app/about",
       icon: Send
     }
   ]

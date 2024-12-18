@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import "@/App.css";
 
-import Home from "./pages/Home";
-import Playground from "./pages/Playground";
-import Settings from "./pages/Settings";
-import About from "./pages/About";
+import Home from "@/pages/Home";
+import Playground from "@/pages/Playground";
+import Settings from "@/pages/Settings";
+import About from "@/pages/About";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSidebar from "./components/app-sidebar";
-import Navbar from "./components/navbar";
+import AppSidebar from "@/components/app-sidebar";
+import Navbar from "@/components/navbar";
 import { Separator } from "@/components/ui/separator";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";

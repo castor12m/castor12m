@@ -22,12 +22,13 @@ function App() {
       </SidebarProvider>
         
       {/* Main Content Area */}
-      <BrowserRouter>
+      <BrowserRouter basename="https://castor12m.github.io/my-app">
         <div className='w-full'>
           <Navbar />
           <Separator className='my-0' />
           <div>
             <Routes>
+              <Route path='#' element={<Home />} />
               <Route path='/' element={<Home />} />
               <Route path='/playground' element={<Playground />} />
               <Route path='/settings' element={<Settings />} />

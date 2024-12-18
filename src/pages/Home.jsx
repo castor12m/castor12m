@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className='flex-1 p-2 sm:p-6'>
-      <h1 className='text-4xl font-bold'>Welcome to Home Page</h1>
+      <h1 className='text-4xl font-bold'>Welcome to Home Page v1.0.1</h1>
       <div>
         <Button onClick={UpCount}>Test</Button>
       </div>

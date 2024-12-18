@@ -2,7 +2,8 @@
   "files": [],
   "references": [],
   "compilerOptions": {
-    "baseUrl": "/my-app/",
+    // "baseUrl": "/my-app/",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }

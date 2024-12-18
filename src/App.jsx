@@ -20,9 +20,9 @@ function App() {
       <SidebarProvider defaultOpen={true}>
         <AppSidebar />
       </SidebarProvider>
-        
+
       {/* Main Content Area */}
-      <BrowserRouter basename="https://castor12m.github.io/my-app">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className='w-full'>
           <Navbar />
           <Separator className='my-0' />

@@ -7,6 +7,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,html}", // React 파일 포함
   ],
   theme: {
+	container: {
+		center: true,
+		padding: '2rem',
+		screens: {
+		  '2xl': '1400px'
+		}
+	},
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',

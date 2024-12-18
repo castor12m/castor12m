@@ -12,34 +12,36 @@ import Navbar from "@/components/navbar";
 import { Separator } from "@/components/ui/separator";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
+import RootProvider from "./providers/root";
+import GithubCorner from "./components/github-corner";
+import Footer from "./components/footer";
 
 function App() {
   //  const defaultOpen = cookieStore.get('sidebar:state')?.value === 'true'
   return (
-    <div className='flex h-screen'>
-      <SidebarProvider defaultOpen={true}>
-        <AppSidebar />
-      </SidebarProvider>
+    <BrowserRouter basename='/my-app'>
+      <RootProvider>
+        <SidebarProvider defaultOpen={true}>
+          <AppSidebar />
 
-      {/* Main Content Area */}
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div className='w-full'>
-          <Navbar />
-          <Separator className='my-0' />
-          <div>
-            <Routes>
-              {/* <Route path='#' element={<Home />} /> */}
-              <Route exact path='/' element={<Home />} />
-              <Route path='/playground' element={<Playground />} />
-              <Route path='/settings' element={<Settings />} />
-              <Route path='/about' element={<About />} />
-            </Routes>
+          <div className='flex h-full w-full flex-col'>
+            <Navbar />
+            <main className='flex h-full flex-col items-center justify-center'>
+              <GithubCorner title='Get started on GitHub' url='https://github.com/castor12m' />
+              <Routes>
+                <Route exact path='*' element={<Home />} />
+                <Route exact path='/home' element={<Home />} />
+                <Route path='/playground' element={<Playground />} />
+                <Route path='/settings' element={<Settings />} />
+                <Route path='/about' element={<About />} />
+              </Routes>
+            </main>
+            <Footer />
           </div>
-        </div>
-      </BrowserRouter>
-
+        </SidebarProvider>
+      </RootProvider>
       <Toaster />
-    </div>
+    </BrowserRouter>
   );
 }
 

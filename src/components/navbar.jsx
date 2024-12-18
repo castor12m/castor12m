@@ -1,9 +1,15 @@
-const Navbar = () => {
-  return (
-    <div className='flex items-center justify-between p-4'>
-      <h5 className='mt-0.5'>My Tools</h5>
-    </div>
-  );
-};
+import React from "react";
 
-export default Navbar;
+import ThemeToggle from "./ui/theme-toggle";
+
+export default function Navbar() {
+  return (
+    <header className='flex h-16 w-full items-center justify-between border-b border-border px-5'>
+      <span className='text-lg font-black'>My-App</span>
+
+      <div className='pr-20'>
+        <ThemeToggle />
+      </div>
+    </header>
+  );
+}

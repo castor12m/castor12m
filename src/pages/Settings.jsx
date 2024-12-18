@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Settings() {
   return (
     <div className='flex-1 p-2 sm:p-6'>

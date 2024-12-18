@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import "@/App.css";
 
-import Home from "@/pages/Home";
-import Playground from "@/pages/Playground";
-import Settings from "@/pages/Settings";
-import About from "@/pages/About";
+import Home from "./pages/Home";
+import Playground from "./pages/Playground";
+import Settings from "./pages/Settings";
+import About from "./pages/About";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/app-sidebar";
@@ -28,8 +28,8 @@ function App() {
           <Separator className='my-0' />
           <div>
             <Routes>
-              <Route path='#' element={<Home />} />
-              <Route path='/' element={<Home />} />
+              {/* <Route path='#' element={<Home />} /> */}
+              <Route exact path='/' element={<Home />} />
               <Route path='/playground' element={<Playground />} />
               <Route path='/settings' element={<Settings />} />
               <Route path='/about' element={<About />} />

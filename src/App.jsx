@@ -1,17 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import "@/App.css";
 
 import Home from "./pages/Home";
 import Playground from "./pages/Playground";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 
-import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSidebar from "@/components/app-sidebar";
-import Navbar from "@/components/navbar";
-import { Separator } from "@/components/ui/separator";
+import { SidebarProvider } from "./components/ui/sidebar";
+import AppSidebar from "./components/app-sidebar";
+import Navbar from "./components/navbar";
+import { Separator } from "./components/ui/separator";
 import { BrowserRouter } from "react-router-dom";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "./components/ui/sonner";
 import RootProvider from "./providers/root";
 import GithubCorner from "./components/github-corner";
 import Footer from "./components/footer";

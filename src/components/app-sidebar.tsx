@@ -38,7 +38,7 @@ const AppSidebar = () => {
                 {appSidebarData.basic.map(item => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild>
-                      <NavLink to="/about">
+                      <NavLink to={item.url}>
                         <item.icon />
                         <span>{item.title}</span>
                       </NavLink>

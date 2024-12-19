@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Docs
         env:
-          - VITE_APP_TEMP_KEY: ${{ secrets.GH_TEST_KEY }} 
+          VITE_APP_TEMP_KEY: ${{ secrets.GH_TEST_KEY }} 
         run: npm run build
 
       - name: Deploy Docs

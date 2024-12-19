@@ -22,13 +22,12 @@ jobs:
         run: npm install
 
       - name: Build Docs
+        env:
+          - VITE_APP_TEMP_KEY: ${{ secrets.GH_TEST_KEY }} 
         run: npm run build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          VITE_APP_TEMP_KEY: ${{ secrets.GH_TEST_KEY }}
-
         with:
           github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
           publish_dir: ./dist

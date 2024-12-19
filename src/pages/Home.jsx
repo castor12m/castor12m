@@ -6,7 +6,6 @@ import { toast } from "sonner";
 export default function Home() {
 
   //const testKey = process.env.REACT_APP_TEST_KEY;
-  const testKey = import.meta.env.VITE_APP_TEST_KEY;
   
   const UpCount = async () => {
     console.log("UpCount!");
@@ -14,12 +13,12 @@ export default function Home() {
   };
   
   const Test02 = async () => {
+    const testKey = import.meta.env.VITE_APP_TEST_KEY;
     toast(`Test02 [${testKey}]`);
   };
   
   const Test03 = async () => {
     const testKey = import.meta.env.VITE_APP_TEMP_KEY;
-
     toast(`Test02 [${testKey}]`);
   };
 
